@@ -1,0 +1,21 @@
+# VsCode
+.vscode/
+.history/
+
+# Virtual env
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local settings
+src/settings/local.py
+
+# Static root & media root folders
+src/static/
+src/media/
+
+# Django DB
+src/db.sqlite3
