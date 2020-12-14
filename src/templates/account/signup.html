@@ -1,0 +1,85 @@
+{% extends 'account/login-signup.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block extra_links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" />
+{% endblock  %}
+
+{% block signup_tab %}active{% endblock %}
+{% block signup_panel %}show active{% endblock %}
+
+{% block signup %}
+<form
+  class="signup"
+  method="POST"
+  action="{% url 'account_signup' %}"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+  <ul class="nav nav-pills">
+    <li class="nav-item mr-2">
+      <a
+        class="nav-link disabled {% if not profile_form %}active{% endif %}"
+        href="#user_form"
+      >{% trans "Registration" %}</a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link disabled text-nowrap {% if profile_form %}active{% endif %}"
+        href="#profile_form"
+      >{% trans "Profile creation" %}</a>
+    </li>
+  </ul>
+  <div
+    class="tab-content px-2"
+    id="formsContent"
+  >
+    <div
+      class="tab-pane fade mt-4 {% if not profile_form %}show active{% endif %}"
+      id="user_form"
+    >
+
+      {% if not profile_form %}
+      <div class="row">
+        {% include 'account/snippets/get_form.html' %}
+      </div>
+      <div class="d-flex">
+        <input
+          type="submit"
+          class="btn btn-dark mt-3 ml-auto"
+          name="user_submit"
+          value="{% trans "Next step" %}"
+        >
+      </div>
+      {% endif %}
+
+    </div>
+    <div
+      class="tab-pane fade mt-4 {% if profile_form %}show active{% endif %}"
+      id="profile_form"
+    >
+
+      {% if profile_form %}
+      {% with profile_form as form %}
+      <div class="row">
+        {% include 'account/snippets/get_form.html' %}
+      </div>
+      <div class="d-flex">
+        <input
+          type="submit"
+          class="btn btn-dark mt-3 ml-auto"
+          name="profile_submit"
+          value="{% trans "Submit" %}"
+        >
+      </div>
+      {% endwith %}
+      {% endif %}
+
+    </div>
+  </div>
+</form>
+{% endblock %}

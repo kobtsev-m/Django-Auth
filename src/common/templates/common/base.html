@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <blockquote class="blockquote">
+      <p>{% trans "Start page" %}</p>
+      <footer class="card-blockquote">
+        {% trans "Hello!" %}
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+{% endblock content %}

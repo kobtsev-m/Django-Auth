@@ -1,0 +1,564 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-14 08:25+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\common\forms.py:77
+msgid "Date of Birth"
+msgstr "Дата рождения"
+
+#: .\common\forms.py:78
+msgid "Profile picture"
+msgstr "Фото профиля"
+
+#: .\common\forms.py:79
+msgid "Bio"
+msgstr "О себе"
+
+#: .\common\forms.py:86
+msgid "Some words about you"
+msgstr "Несколько слов о себе"
+
+#: .\common\templates\common\base.html:10
+msgid "Start page"
+msgstr "Главная страница"
+
+#: .\common\templates\common\base.html:12
+msgid "Hello!"
+msgstr "Привет!"
+
+#: .\common\templates\common\user_profile.html:64
+msgid "There is no social accounts connected yet."
+msgstr "Аккаунты сервисов не были добавлены."
+
+#: .\common\templates\common\user_profile.html:65
+msgid "Connect one?"
+msgstr "Хотите подключить?"
+
+#: .\common\templates\common\user_profile.html:83
+#: .\common\templates\common\user_settings.html:49
+#: .\common\templates\index.html:115
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\common\templates\common\user_profile.html:87
+msgid "Date of birth:"
+msgstr "Дата рождения"
+
+#: .\common\templates\common\user_profile.html:91
+msgid "About:"
+msgstr "О себе"
+
+#: .\common\templates\common\user_profile.html:99
+#: .\common\templates\index.html:121
+msgid "Settings"
+msgstr "Настройки"
+
+#: .\common\templates\common\user_settings.html:37
+#: .\common\templates\forms\image-field.html:22
+msgid "Change"
+msgstr "Изменить"
+
+#: .\common\templates\common\user_settings.html:65
+msgid "Social accounts"
+msgstr "Сервисы"
+
+#: .\common\templates\common\user_settings.html:69
+msgid "Manage accounts"
+msgstr "Управление аккаунтами"
+
+#: .\common\templates\common\user_settings.html:80
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\common\templates\forms\image-field.html:21
+msgid "Select image"
+msgstr "Выбрать"
+
+#: .\common\templates\forms\image-field.html:39
+#: .\templates\account\email.html:66
+#: .\templates\socialaccount\connections.html:55
+msgid "Remove"
+msgstr "Удалить"
+
+#: .\common\templates\index.html:49
+msgid "Home"
+msgstr "Главная"
+
+#: .\common\templates\index.html:129 .\templates\account\logout.html:42
+msgid "Sign out"
+msgstr "Выйти"
+
+#: .\common\templates\index.html:139 .\templates\account\login.html:51
+msgid "Sign in"
+msgstr "Войти"
+
+#: .\templates\account\account_inactive.html:5
+#: .\templates\account\account_inactive.html:9
+msgid "Account Inactive"
+msgstr "Аккаунт не активен"
+
+#: .\templates\account\account_inactive.html:11
+msgid "This account is inactive."
+msgstr "Этот аккаунт не активен."
+
+#: .\templates\account\email.html:9
+msgid "Your e-mail addresses:"
+msgstr "Список e-mail адресов"
+
+#: .\templates\account\email.html:40
+msgid "Verified"
+msgstr "Подтверждён"
+
+#: .\templates\account\email.html:42
+msgid "Unverified"
+msgstr "Не подтвреждён"
+
+#: .\templates\account\email.html:45
+msgid "Primary"
+msgstr "Основной"
+
+#: .\templates\account\email.html:56
+msgid "Make Primary"
+msgstr "Сделать основным"
+
+#: .\templates\account\email.html:61
+msgid "Re-send Verification"
+msgstr "Выслать подтверждение заново"
+
+#: .\templates\account\email.html:75
+msgid "Warning:"
+msgstr "Предупреждение:"
+
+#: .\templates\account\email.html:76
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"В настоящее время у вас не настроен адрес электронной почты. Вам стоит "
+"добавить адрес электронной почты, по которому вы можете получать "
+"уведомления, менять пароль и т.д."
+
+#: .\templates\account\email.html:83
+msgid "Add e-mail address"
+msgstr "Добавить адрес электронной почты"
+
+#: .\templates\account\email.html:105
+msgid "Add E-mail"
+msgstr "Добавить адрес"
+
+#: .\templates\account\email.html:118
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "Вы действительно хотите удалить выбранный адрес электронной почты?"
+
+#: .\templates\account\email\base_message.txt:1
+#, python-format
+msgid "Hello from %(site_name)s!"
+msgstr "Привет от %(site_name)s!"
+
+#: .\templates\account\email\base_message.txt:5
+#, python-format
+msgid "Thank you for using %(site_name)s!"
+msgstr "Спасибо за использование %(site_name)s!"
+
+#: .\templates\account\email\email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"You're receiving this e-mail because user %(user_display)s has given your e-"
+"mail address to register an account on %(site_domain)s.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s"
+msgstr ""
+"Вы получили это письмо, потому что пользователь %(user_display)s предоставил "
+"вашадрес электронной почты для регистрации учетной записи на "
+"%(site_domain)s.\n"
+"\n"
+"Чтобы подтвердить, что это Ваш адрес, перейдите на %(activate_url)s"
+
+#: .\templates\account\email\email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr "Пожалуйста, подтвердите свой e-mail адрес"
+
+#: .\templates\account\email\password_reset_key_message.txt:4
+msgid ""
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+"Вы получили это письмо, потому что вы или кто-то другой запросил пароль для "
+"Вашей учетной записи.\n"
+"Его можно проигнорировать, если Вы не запрашивали сброс пароля. Перейдите по "
+"ссылке ниже, чтобы\n"
+"сбросить пароль."
+
+#: .\templates\account\email\password_reset_key_message.txt:9
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr "Если вы забыли, Ваше имя пользователя - %(username)s."
+
+#: .\templates\account\email\password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr "Электронная почта для сброса пароля"
+
+#: .\templates\account\email_confirm.html:6
+#: .\templates\account\email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr "Подтвердите адрес электронной почты"
+
+#: .\templates\account\email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that\n"
+"  <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail address for user\n"
+"  %(user_display)s."
+msgstr ""
+"Пожалуйста, подтвердите, что\n"
+"  <a href=\"mailto:%(email)s\">%(email)s</a> - это адрес электронной почты "
+"пользователя\n"
+"  %(user_display)s."
+
+#: .\templates\account\email_confirm.html:26
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: .\templates\account\email_confirm.html:33
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please\n"
+"  <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Срок действия ссылки для подтверждения по электронной почте истек или "
+"недействителен. Пожалуйста,\n"
+"  <a href=\"%(email_url)s\"> отправьте новый запрос подтверждения по "
+"электронной почте </a>."
+
+#: .\templates\account\login-signup.html:17
+msgid "Login"
+msgstr "Вход"
+
+#: .\templates\account\login-signup.html:27
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: .\templates\account\login.html:41
+msgid "Login using your email"
+msgstr "Войдите, используя email"
+
+#: .\templates\account\login.html:58
+msgid "Or login with"
+msgstr "Или через"
+
+#: .\templates\account\login.html:70
+#: .\templates\account\password_change.html:23
+msgid "Forgot Password?"
+msgstr "Забыли пароль?"
+
+#: .\templates\account\login.html:75
+msgid "Reset"
+msgstr "Восстановить"
+
+#: .\templates\account\logout.html:11
+msgid "Sign Out"
+msgstr "Выход"
+
+#: .\templates\account\logout.html:22
+msgid "Are you sure you want to sign out?"
+msgstr "Вы уверены, что хотите выйти?"
+
+#: .\templates\account\logout.html:49
+msgid "Back"
+msgstr "Отмена"
+
+#: .\templates\account\messages\cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+"Вы не можете удалить свой основной адрес элетронной почты - (%(email)s)."
+
+#: .\templates\account\messages\email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr "Электронное письмо с подтверждением отправлено на %(email)s."
+
+#: .\templates\account\messages\email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr "Электронный адрес %(email)s подтверждён."
+
+#: .\templates\account\messages\email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr "Удален адрес электронной почты %(email)s."
+
+#: .\templates\account\messages\logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr "Успешно выполнен вход под именем %(name)s."
+
+#: .\templates\account\messages\logged_out.txt:2
+msgid "You have signed out."
+msgstr "Вы вышли из аккаунта."
+
+#: .\templates\account\messages\password_changed.txt:2
+msgid "Password successfully changed."
+msgstr "Пароль успешно изменён."
+
+#: .\templates\account\messages\password_set.txt:2
+msgid "Password successfully set."
+msgstr "Пароль успешно установлен."
+
+#: .\templates\account\messages\primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr "Основной адрес электронной почты установлен."
+
+#: .\templates\account\messages\unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr "Ваш основной e-mail должен быть подтверждён."
+
+#: .\templates\account\password_change.html:6
+#: .\templates\account\password_change.html:10
+#: .\templates\account\password_change.html:22
+#: .\templates\account\password_reset_from_key.html:6
+#: .\templates\account\password_reset_from_key.html:11
+#: .\templates\account\password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr "Изменить пароль"
+
+#: .\templates\account\password_reset.html:10
+#: .\templates\account\password_reset_done.html:8
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: .\templates\account\password_reset.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send\n"
+"  you an e-mail allowing you to reset it."
+msgstr ""
+"Забыли пароль? Введите ниже свой адрес электронной почты, и мы отправим\n"
+"  вам письмо, позволяющее его сбросить."
+
+#: .\templates\account\password_reset.html:37
+msgid ""
+"Please contact us if you have any trouble resetting your\n"
+"    password."
+msgstr ""
+"Пожалуйста, свяжитесь с нами, если у вас возникнут проблемы со сбросом\n"
+"    пароля."
+
+#: .\templates\account\password_reset.html:44
+msgid "Reset my password"
+msgstr "Сбросить пароль"
+
+#: .\templates\account\password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive\n"
+"  it within a few minutes."
+msgstr ""
+"Мы отправили вам электронное письмо. Свяжитесь с нами, если вы не получите\n"
+"  его в течение нескольких минут."
+
+#: .\templates\account\password_reset_from_key.html:11
+msgid "Bad Token"
+msgstr "Некорректный токен"
+
+#: .\templates\account\password_reset_from_key.html:18
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been\n"
+"  used. Please request a <a href=\"%(passwd_reset_url)s\">new password "
+"reset</a>.\n"
+"  "
+msgstr ""
+"Ссылка для сброса пароля недействительна, возможно, потому что она уже\n"
+"  использовалась. Пожалуйста, запросите <a href=\"%(passwd_reset_url)s"
+"\">сброс пароля</a> ещё раз.\n"
+"  "
+
+#: .\templates\account\password_reset_from_key.html:38
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\account\password_reset_from_key.html:44
+#: .\templates\account\password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr "Ваш пароль изменён"
+
+#: .\templates\account\password_set.html:6
+#: .\templates\account\password_set.html:10
+#: .\templates\account\password_set.html:22
+msgid "Set Password"
+msgstr "Установить пароль"
+
+#: .\templates\account\signup.html:28
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\templates\account\signup.html:34
+msgid "Profile creation"
+msgstr "Создание профиля"
+
+#: .\templates\account\signup.html:55
+msgid "Next step"
+msgstr "Следующий шаг"
+
+#: .\templates\account\signup.html:76 .\templates\socialaccount\signup.html:58
+msgid "Submit"
+msgstr "Зарегистрироваться"
+
+#: .\templates\account\signup_closed.html:5
+#: .\templates\account\signup_closed.html:9
+msgid "Sign Up Closed"
+msgstr "Регистрация закрыта"
+
+#: .\templates\account\signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Сожалеем, но регистрация в настоящее время закрыта."
+
+#: .\templates\account\snippets\already_logged_in.html:7
+msgid "Note"
+msgstr "Примечание"
+
+#: .\templates\account\snippets\already_logged_in.html:8
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr "Вы уже вошли в систему как %(user_display)s."
+
+#: .\templates\account\verification_sent.html:5
+#: .\templates\account\verification_sent.html:9
+#: .\templates\account\verified_email_required.html:5
+#: .\templates\account\verified_email_required.html:9
+msgid "Verify Your E-mail Address"
+msgstr "Подтвердите Ваш адрес электронной почты"
+
+#: .\templates\account\verification_sent.html:11
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to\n"
+"  finalize the signup process. Please contact us if you do not receive it "
+"within a few\n"
+"  minutes."
+msgstr ""
+"Мы отправили вам электронное письмо для проверки. Перейдите по указанной "
+"ссылке,\n"
+"  чтобы завершить процесс регистрации. Свяжитесь с нами, если вы не "
+"получите \n"
+"  письмо в течение нескольких минут."
+
+#: .\templates\account\verified_email_required.html:13
+msgid ""
+"This part of the site requires us to verify that\n"
+"  you are who you claim to be. For this purpose, we require that you\n"
+"  verify ownership of your e-mail address. "
+msgstr ""
+"Эта часть сайта требует от нас подтверждения\n"
+"  Вашей личности. Для этого мы просим вас подтвердить,\n"
+"  что это десвительно Ваш адрес электронной почты."
+
+#: .\templates\account\verified_email_required.html:18
+msgid ""
+"We have sent an e-mail to you for\n"
+"  verification. Please click on the link inside this e-mail. Please\n"
+"  contact us if you do not receive it within a few minutes."
+msgstr ""
+"Мы отправили вам электронное письмо для\n"
+"  проверки. Перейдите по ссылке в этом письме. Пожалуйста, свяжитесь с "
+"нами,\n"
+"  если Вы вдруг не получите письмо в течение нескольких минут."
+
+#: .\templates\account\verified_email_required.html:23
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your\n"
+"    e-mail address</a>."
+msgstr ""
+"<strong>Примечание:</strong>Вы всё равно можете <a href=\"%(email_url)s"
+"\">изменить свой\n"
+"  адрес электронной почты</a>."
+
+#: .\templates\socialaccount\authentication_error.html:5
+#: .\templates\socialaccount\authentication_error.html:9
+msgid "Social Network Login Failure"
+msgstr "Ошибка входа в социальную сеть"
+
+#: .\templates\socialaccount\authentication_error.html:12
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"Произошла ошибка при попытке войти в систему через учетную запись социальной "
+"сети."
+
+#: .\templates\socialaccount\connections.html:6
+#: .\templates\socialaccount\connections.html:10
+msgid "Account Connections"
+msgstr "Подключённые учётные записи"
+
+#: .\templates\socialaccount\connections.html:14
+msgid ""
+"You can sign in to your account using any of the following\n"
+"  third party accounts:"
+msgstr ""
+"Вы можете войти в свою учетную запись, используя любой из следующих\n"
+"  сервисов:"
+
+#: .\templates\socialaccount\connections.html:66
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+"В настоящее время у Вас нет учётных записей социальных сетей, связанных с "
+"этим профилем."
+
+#: .\templates\socialaccount\connections.html:71
+msgid "Add a 3rd Party Account"
+msgstr "Добавить стороннюю учётную запись"
+
+#: .\templates\socialaccount\login_cancelled.html:7
+msgid "Login Cancelled"
+msgstr "Вход отменен"
+
+#: .\templates\socialaccount\login_cancelled.html:12
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your\n"
+"  existing accounts. If this was a mistake, please proceed to\n"
+"  <a href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+"Вы решили отменить вход на наш сайт с помощью одной из Ваших\n"
+"  существующих учётных записей. Если это была ошибка, пожалуйста,\n"
+"  <a href=\"%(login_url)s\">повторите попытку</a>."
+
+#: .\templates\socialaccount\messages\account_connected.txt:2
+msgid "The social account has been connected."
+msgstr "Учётная запись сервиса была успешно подключена."
+
+#: .\templates\socialaccount\messages\account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr "Указанная учётная запись уже подключена к другому профилю."
+
+#: .\templates\socialaccount\messages\account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr "Учётная запись была отключена."
+
+#: .\templates\socialaccount\signup.html:27
+msgid ""
+"You are about to use your\n"
+"      %(provider_name)s account to login. As a final step, please, complete\n"
+"      the following form:"
+msgstr ""
+"Вы собираетесь использовать свою учетную запись  %(provider)s для\n"
+"входа. В качестве последнего шага заполните следующую форму:"

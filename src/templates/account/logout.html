@@ -1,0 +1,54 @@
+{% load i18n %}
+
+<div
+  class="modal fade"
+  tabindex="-1"
+  id="logoutModal"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{% trans "Sign Out" %}</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{% trans "Are you sure you want to sign out?" %}</p>
+      </div>
+      <div class="modal-footer">
+        <form
+          method="post"
+          action="{% url 'account_logout' %}"
+        >
+          {% csrf_token %}
+          {% if redirect_field_value %}
+          <input
+            type="hidden"
+            name="{{ redirect_field_name }}"
+            value="{{ redirect_field_value }}"
+          />
+          {% endif %}
+          <button
+            type="submit"
+            class="btn btn-danger logout-btn"
+            data-bs-dismiss="modal"
+          >
+            {% trans "Sign out" %}
+          </button>
+        </form>
+        <button
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >
+          {% trans "Back" %}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

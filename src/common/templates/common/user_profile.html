@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% load socialaccount %}
+{% load i18n %}
+
+{% load forms_custom_field %}
+
+{% block extra_links %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+{% endblock  %}
+
+{% block content %}
+<div class="row">
+  <div class="card profile-header">
+    <div class="background-block">
+      <img
+        src="{% static 'img/profile_bg.jpg' %}"
+        class="background"
+      />
+    </div>
+    <div class="profile-thumb-block">
+      {% if user.userprofile.avatar %}
+      <div
+        style="background-image: url({{ user.userprofile.avatar.url }})"
+        alt="profile-image"
+        class="profile"
+      ></div>
+      {% else %}
+      <div
+        class="profile d-flex align-items-center justify-content-center"
+        alt="profile-image"
+      >
+        <i class="fas fa-user h2"></i>
+      </div>
+      {% endif %}
+    </div>
+    <div class="card-content">
+      {% with user.socialaccount_set.exists as sa_exists %}
+      {% if user.first_name %}
+      <h2>
+        {{ user.first_name }} {{ user.last_name }} ({{ user.username }})
+        <small>{{ user.email }}</small>
+      </h2>
+      {% else %}
+      <h2>
+        {{ user.username }}<small>{{ user.email }}</small>
+      </h2>
+      {% endif %}
+      <div class="icon-block">
+        {% if sa_exists %}
+        {% for socialaccount in user.socialaccount_set.all %}
+        <a
+          target="{% if socialaccount.get_profile_url %}_blank{% endif %}"
+          class="px-2"
+          href="{{ socialaccount.get_profile_url|default:"" }}"
+        >
+          {{ socialaccount.get_provider.name }}
+          <i class="fab fa-{{ socialaccount.get_provider.name|lower }}"></i>
+        </a>
+        {% endfor %}
+        {% else %}
+        <span class="h6 font-weight-bold">
+          {% trans "There is no social accounts connected yet." %}<br>
+          {% trans "Connect one?" %}
+        </span>
+        <a
+          href="{% url 'socialaccount_connections' %}"
+          class="mt-1 px-2"
+        >
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endwith %}
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="card profile p-3 w-100">
+    <div class="card-body ">
+      <h2 class="card-title">{% trans "Profile" %}</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex">
+        <strong class="text-nowrap mr-2">{% trans "Date of birth:" %}</strong>
+        <p>{{ user.userprofile.birth_date }}</p>
+      </li>
+      <li class="list-group-item d-flex">
+        <strong class="text-nowrap mr-2">{% trans "About:" %}</strong>
+        <p class="text-truncate">{{ user.userprofile.about }}</p>
+      </li>
+    </ul>
+    <a
+      href="{% url 'common:user-settings' user.pk %}"
+      class="card-link btn mt-4 mb-3 w-100"
+    >
+      <i class="fas fa-cog mr-2"></i>{% trans "Settings" %}
+    </a>
+  </div>
+</div>
+{% endblock %}

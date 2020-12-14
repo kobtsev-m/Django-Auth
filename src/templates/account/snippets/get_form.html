@@ -1,0 +1,70 @@
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+{% load forms_custom_field %}
+
+{% for field in form %}
+
+{% if field.name in "login//password" %}
+<div class="input-group col-12 mt-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text bg-white pr-4 px-sm-4 border-md border-right-0
+    {% if field.errors %}form-control is-invalid{% endif %}">
+      {{ field|field_icon|safe }}
+    </span>
+  </div>
+  {{ field|custom_field }}
+  {% for error in field.errors %}
+  <span
+    id="
+      error_{{ forloop.counter }}_{{ field.auto_id }}"
+    class="invalid-feedback"
+  >
+    <strong>{{ error }}</strong>
+  </span>
+  {% endfor %}
+</div>
+{% elif field.name in "email//username//birth_date//about//password1//password2" %}
+<div class="form-froup col-12 mb-3">
+  <label for="{{ field.id_for_label }}">
+    {{ field.label}}
+    {% if field.field.required %}<span class="asteriskField">*</span>{% endif %}
+  </label>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text bg-white pr-4 px-sm-4 border-md
+      {% if field.errors %}form-control is-invalid{% endif %}">
+        {{ field|field_icon|safe }}
+      </span>
+    </div>
+    {{ field|custom_field }}
+    {% for error in field.errors %}
+    <span
+      id="error_{{ forloop.counter }}_{{ field.auto_id }}"
+      class="invalid-feedback"
+    >
+      <strong>{{ error }}</strong>
+    </span>
+    {% endfor %}
+  </div>
+</div>
+{% elif field.name == 'avatar' %}
+<div class="form-froup col-12 mb-1">
+  <label for="{{ field.id_for_label }}">
+    {{ field.label}}
+    {% if field.field.required %}<span class="asteriskField">*</span>{% endif %}
+  </label>
+  <br>
+  {{ field }}
+</div>
+{% elif field|is_checkbox %}
+<div class="form-group col-12 d-flex justify-content-end mt-3">
+  <div class="form-check">
+    {{ field }}
+    {{ field.label }}
+  </div>
+</div>
+{% else %}
+{{ field }}
+{% endif %}
+
+{% endfor %}

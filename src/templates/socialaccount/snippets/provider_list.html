@@ -1,0 +1,16 @@
+{% load socialaccount %}
+{% load forms_custom_field %}
+
+{% get_providers as socialaccount_providers %}
+
+{% for provider in socialaccount_providers %}
+<div class="form-group">
+  <a
+    href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}"
+    class="btn {{ provider|provider_btn_class }} btn-block py-2"
+  >
+    <i class="fab fa-{{ provider.name|lower }} mr-2"></i>
+    <span class="font-weight-bold">{{ provider.name }}</span>
+  </a>
+</div>
+{% endfor %}

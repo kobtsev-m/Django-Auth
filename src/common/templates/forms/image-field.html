@@ -1,0 +1,45 @@
+{% load i18n %}
+
+<div
+  class="fileinput d-flex {% if field_image %}fileinput-exists {% else %}fileinput-new{% endif %}"
+  data-provides="fileinput"
+>
+  <div class="fileinput-new img-thumbnail mb-0">
+    <i class="fas fa-images"></i>
+  </div>
+  <div class="fileinput-preview fileinput-exists img-thumbnail mb-0 p-2">
+    {% if field_image %}
+    <img src="{{ field_image }}">
+    {% elif user.userprofile.avatar %}
+    <img src="{{ user.userprofile.avatar.url }}">
+    {% endif %}
+    {{ user.userprofile.avatar.url }}
+  </div>
+  <div class="d-flex flex-column ml-2">
+    <span class="btn btn-outline-dark btn-file d-flex
+    justify-content-center align-items-center h-100">
+      <span class="fileinput-new">{% trans "Select image" %}</span>
+      <span class="fileinput-exists">{% trans "Change" %}</span>
+      <input
+        type="file"
+        name="{{ widget.name }}"
+      >
+      {% if field_image %}
+      <input
+        id="imgOnChange"
+        type="hidden"
+        name="{{ widget.name }}_changed"
+        value="0"
+      >
+      {% endif %}
+    </span>
+    <a
+      data-dismiss="fileinput"
+      href=""
+      class="btn btn-outline-danger btn-file-del fileinput-exists d-flex
+      justify-content-center align-items-center h-100 mt-2"
+    >
+      {% trans "Remove" %}
+    </a>
+  </div>
+</div>

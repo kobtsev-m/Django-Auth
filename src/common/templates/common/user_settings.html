@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block extra_links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" />
+{% endblock  %}
+
+{% block content %}
+<form
+  action="{% url 'common:user-settings' user.pk %}"
+  method="post"
+  class="settings"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="card px-0 h-100">
+        <div
+          style="background-image: url({% static 'img/settings_main_bg.jpg' %});"
+          class="card-img-top"
+        ></div>
+        <div class="card-body">
+          <h4 class="card-title">Main</h4>
+          {{ form|crispy }}
+          <label>Email <small class="text-muted">(Primary)</small></label>
+          <br>
+          <div class="d-flex mt-1">
+            <em class=" text-muted text-truncate ml-1">{{ user.email }}</em>
+            <a
+              href="{% url 'account_email' %}"
+              class="btn btn-sm btn-outline-dark ml-auto"
+            >{% trans "Change" %}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 mt-4 mt-md-0">
+      <div class="card">
+        <div
+          style="background-image: url({% static 'img/settings_profile_bg.jpg' %});"
+          class="card-img-top"
+        ></div>
+        <div class="card-body ">
+          <h4 class="card-title">{% trans "Profile" %}</h4>
+          {{ profile_form.birth_date|as_crispy_field }}
+          {{ profile_form.avatar|as_crispy_field }}
+          {{ profile_form.about|as_crispy_field }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card h-100">
+        <div
+          style="background-image: url({% static 'img/settings_social_bg.jpg' %});"
+          class="card-img-top card-img-top-social"
+        ></div>
+        <div class="card-body ">
+          <h4 class="card-title">{% trans "Social accounts" %}</h4>
+          <a
+            href="{% url 'socialaccount_connections' %}"
+            class="btn btn-outline-secondary mt-2"
+          >{% trans "Manage accounts" %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-12 d-flex">
+      <button
+        type="submit"
+        class="btn btn-outline-success mt-2 ml-auto"
+      >
+        {% trans "Save changes" %}
+      </button>
+    </div>
+  </div>
+</form>
+{% endblock  %}

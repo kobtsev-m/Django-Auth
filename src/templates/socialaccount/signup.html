@@ -1,0 +1,61 @@
+{% extends 'account/login-signup.html' %}
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load forms_custom_field %}
+
+{% block extra_links %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" integrity="sha512-YdYyWQf8AS4WSB0WWdc3FbQ3Ypdm0QCWD2k4hgfqbQbRCJBEgX0iAegkl2S1Evma5ImaVXLBeUkIlP6hQ1eYKQ==" crossorigin="anonymous" />
+{% endblock  %}
+
+{% block signup_tab %}active{% endblock %}
+{% block signup_panel %}show active{% endblock %}
+
+{% block signup_preview %}
+{% with account.get_provider as provider %}
+<div
+  style="background-color: {{ provider|provider_color }}"
+  class="signup-preview-image mb-3"
+>
+  <div class="text-center">
+    <span class="text-uppercase text-white display-4 font-weight-bold">
+      {{ provider.name }}
+    </span>
+    <hr class="my-2">
+    <p class="text-white">
+      {% blocktrans with provider_name=provider.name %}You are about to use your
+      {{ provider_name }} account to login. As a final step, please, complete
+      the following form:{% endblocktrans %}
+    </p>
+  </div>
+</div>
+{% endwith %}
+{% endblock  %}
+
+{% block signup %}
+
+<form
+  class="signup"
+  id="signup_form"
+  method="post"
+  action="{% url 'socialaccount_signup' %}"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+  <div class="row">
+    {% include 'account/snippets/get_form.html' %}
+  </div>
+  <div class="row">
+    {% with profile_form as form %}
+    {% include 'account/snippets/get_form.html' %}
+    {% endwith %}
+  </div>
+  <div class="d-flex">
+    <button
+      type="submit"
+      class="btn btn-dark mt-3 ml-auto"
+    >{% trans "Submit" %}</button>
+  </div>
+</form>
+{% endblock %}
