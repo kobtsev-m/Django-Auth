@@ -9,4 +9,4 @@
 <kbd><img src="https://user-images.githubusercontent.com/44488666/112024070-66a5d080-8b66-11eb-9134-69064b142c23.png" /></kbd>
 
 ### Страница настроек
-<kbd><img src="https://user-images.githubusercontent.com/44488666/112024001-5857b480-8b66-11eb-8577-99a903bf0a3a.png" /></kbd>
+<kbd><img src="https://user-images.githubusercontent.com/44488666/112026360-b4bbd380-8b68-11eb-88eb-53889342200e.png" /></kbd>
